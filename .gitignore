@@ -55,3 +55,11 @@ proguard_logs/
 .idea/
 
 adt-bundle-windows-x86_64/
+# Created by http://gitignore.io
+
+### vim ###
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
