@@ -1,6 +1,6 @@
-; list 9-2
-
 (ns org.stuff.clojuroid.main)
+
+; list 9-2
 
 (use 'neko.resource 'neko.activity 'neko.notify 'neko.ui 'neko.threading 'neko.application)
 
