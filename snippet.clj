@@ -54,3 +54,16 @@
         [:list-view {:adapter adapter}]])))
 
 (swap! alphabet conj "new")
+
+; list 9-4
+
+(use 'neko.resource 'neko.activity 'neko.notify 'neko.ui 'neko.threading 'neko.application)
+
+(import 'android.net.Uri android.content.Intent)
+
+(defn call-number [number]
+  (let [intent (Intent. Intent/ACTION_DIAL)]
+    (.setData intent (Uri/parse (str "tel:" number)))
+    (.startActivity a intent)))
+
+(call-number "03-9999-9999")
