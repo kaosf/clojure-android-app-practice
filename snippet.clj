@@ -30,3 +30,27 @@
                     :content-title "One new message"
                     :content-text "FROM: foo@bar.com"
                     :action [:activity "my.package.VIEW_MAIL"]))
+
+; list 9-3
+
+(use 'neko.resource 'neko.activity 'neko.notify 'neko.ui 'neko.threading 'neko.application)
+
+(use 'neko.ui.adapters)
+
+(def alphabet
+  (atom ["alpha" "bravo" "charlie" "delta" "hello"]))
+
+(def adapter (ref-adapter
+               (fn [] (make-ui [:text-view {}]))
+               (fn [position view _ data]
+                 (.setText ^android.widget.TextView view (str position "." data)))
+               alphabet
+               identity))
+
+(on-ui
+  (set-content-view! a
+    (make-ui
+      [:linear-layout {}
+        [:list-view {:adapter adapter}]])))
+
+(swap! alphabet conj "new")
