@@ -121,6 +121,7 @@ Compilation failed.
 ## References
 
 * [おいしい Clojure 入門 初版](http://gihyo.jp/book/2013/978-4-7741-5991-1)
+* [Tutorial · clojure-android/lein-droid Wiki](https://github.com/clojure-android/lein-droid/wiki/Tutorial)
 
 ## License
 
