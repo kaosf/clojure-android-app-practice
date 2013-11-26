@@ -10,7 +10,7 @@
 
 ### How to Start, Build and Deploy
 
-Modify `$HOME/.lein/profiles.clj` by adding `[lein-droid/lein-droid "0.2.0"]` into `{:user {:plugins [ __here__ ]}}`.
+Modify `$HOME/.lein/profiles.clj` by adding `[lein-droid/lein-droid "0.2.0"]` into `{:user {:plugins [ __here__ ]}}` and `:android {:sdk-path "/some/where/android-sdk-directory/"}` into `{:user { __here__ }}`.
 
 ```sh
 lein droid doall
