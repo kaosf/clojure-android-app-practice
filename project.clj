@@ -38,5 +38,5 @@
             ;; If previous option didn't work, uncomment this as well.
             ;; :force-dex-optimize true
 
-            :target-version "17"
+            :target-version "10"
             :aot-exclude-ns ["clojure.parallel" "clojure.core.reducers"]})
