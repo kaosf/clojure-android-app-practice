@@ -16,7 +16,7 @@ lein droid doall
 
 Modifying `:target-version 17` to `:target-version 10` in `project.clj` and `minSdkVersion="11"` to `minSdkVersion="10" in `AndroidManifest.xml`, it makes build to fail. Error log is below.
 
-```txt
+```textile
 ...
 Compiling neko.doc
 Exception in thread "main" java.lang.ExceptionInInitializerError
