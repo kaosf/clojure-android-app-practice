@@ -20,6 +20,12 @@ lein droid doall
 
 `deploy` is same to `install`, `run` and `forward-port`.
 
+### Connect to REPL on a real device
+
+```sh
+lein droid repl
+```
+
 ### SDK Version under 11
 
 Modifying `:target-version 17` to `:target-version 10` in `project.clj` and `minSdkVersion="11"` to `minSdkVersion="10" in `AndroidManifest.xml`, it makes build to fail. Error log is below.
