@@ -83,26 +83,31 @@
   (on-ui
     (set-content-view! a (make-ui x))))
 
-(change-ui! [:linear-layout {} [:text-view {:text "a\nb\nc\n"}]])
+(change-ui! [:linear-layout {:layout-height :fill}
+             [:text-view {:text "a"}]])
 
-(change-ui! [:linear-layout {:layout-height :fill} [:text-view {:text "a"}]])
+(change-ui! [:relative-layout {:layout-height :fill}
+             [:text-view {:text "a"}]])
 
-(change-ui! [:relative-layout {:layout-height :fill} [:text-view {:text "a"}]])
+(change-ui! [:relative-layout {:layout-height :fill}
+             [:text-view {:text "a"}]
+             [:text-view {:text "b"}]])
 
-(change-ui! [:relative-layout {:layout-height :fill} [:text-view {:text "a"}] [:text-view {:text "b"}]])
+(change-ui! [:relative-layout {:layout-height :fill}
+             [:text-view {:text "a" :id "@+id/t1"}]
+             [:text-view {:text "b" :layout-below "@+id/t1"}]])
 
-(change-ui! [:relative-layout {:layout-height :fill} [:text-view {:text "a" :id "@+id/t1"}] [:text-view {:text "b" :layout-below "@+id/t1"}]])
+(change-ui! [:relative-layout {:layout-height :fill}
+             [:text-view {:text "a" :id "@+id/t1"}]
+             [:text-view {:text "b" :id "@+id/t2" :layout-below "@+id/t1"}]
+             [:button {:text "Button"}]])
 
-(change-ui! [:relative-layout {:layout-height :fill} [:text-view {:text "a" :id "@+id/t1"}] [:text-view {:id "@+id/t2" :text "b" :layout-below "@+id/t1"}] [:button {:text "Button"}]])
+(change-ui! [:relative-layout {:layout-height :fill}
+             [:text-view {:text "a" :id "@+id/t1"}]
+             [:text-view {:text "b" :id "@+id/t2" :layout-below "@+id/t1"}]
+             [:button {:text "Button" :layout-below "@+id/t2"}]])
 
-(change-ui! [:relative-layout {:layout-height :fill} [:text-view {:text "a" :id "@+id/t1"}] [:text-view {:id "@+id/t2" :text "b" :layout-below "@+id/t1"}] [:button {:text "Button" :layout-below "@+id/t2"}]])
-
-(change-ui! [:relative-layout {:layout-height :fill} [:text-view {:text "a" :id "@+id/t1"}] [:text-view {:id "@+id/t2" :text "b" :layout-below "@+id/t1"}]])
-
-(change-ui! [:relative-layout {:layout-height :fill} [:text-view {:text "a" :id "@+id/t1"}] [:text-view {:id "@+id/t2" :text "b" :layout-below "@+id/t1"}] [:text-view {:text "c" :layout-below "@+id/t2"}]])
-
-(change-ui! [:relative-layout {:layout-height :fill} [:text-view {:text "a" :id "@+id/t1"}] [:text-view {:id "@+id/t2" :text "b" :layout-below "@+id/t1"}] [:text-view {:text "c" :layout-below "@+id/t2"}] [:button {:text "button"}]])
-
-(change-ui! [:relative-layout {:layout-height :fill} [:text-view {:text "a" :id "@+id/t1"}] [:text-view {:id "@+id/t2" :text "b" :layout-below "@+id/t1"}] [:text-view {:id "@+id/t3" :text "c" :layout-below "@+id/t2"}] [:button {:text "button"}]])
-
-(change-ui! [:relative-layout {:layout-height :fill} [:text-view {:text "a" :id "@+id/t1"}] [:text-view {:id "@+id/t2" :text "b" :layout-below "@+id/t1"}] [:text-view {:id "@+id/t3" :text "c" :layout-below "@+id/t2"}] [:button {:text "button" :layout-below "@+id/t3"}]])
+(change-ui! [:relative-layout {:layout-height :fill}
+             [:text-view {:text "a" :id "@+id/t1"}]
+             [:text-view {:text "b" :id "@+id/t2" :layout-below "@+id/t1"}]
+             [:button {:text "button" :layout-below "@+id/t2"}]])
