@@ -118,3 +118,7 @@
              [:button {:text "button"
                        :on-click
                          (fn [_] (toast "toast message" :short))}]])
+
+(change-ui! [:linear-layout {}
+             [:button {:text "1"}]
+             [:button {:text "2"}]])
