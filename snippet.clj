@@ -111,3 +111,10 @@
              [:text-view {:text "a" :id "@+id/t1"}]
              [:text-view {:text "b" :id "@+id/t2" :layout-below "@+id/t1"}]
              [:button {:text "button" :layout-below "@+id/t2"}]])
+
+(change-ui! [:linear-layout {:orientation :vertical}
+             [:text-view {:text "a"}]
+             [:text-view {:text "b"}]
+             [:button {:text "button"
+                       :on-click
+                         (fn [_] (toast "toast message" :short))}]])
