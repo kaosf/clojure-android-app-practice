@@ -122,3 +122,9 @@
 (change-ui! [:linear-layout {}
              [:button {:text "1"}]
              [:button {:text "2"}]])
+
+; sub activity
+
+(ns org.stuff.clojuroid.sub)
+
+a
