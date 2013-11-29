@@ -122,6 +122,7 @@ Compilation failed.
 
 * [おいしい Clojure 入門 初版](http://gihyo.jp/book/2013/978-4-7741-5991-1)
 * [Tutorial · clojure-android/lein-droid Wiki](https://github.com/clojure-android/lein-droid/wiki/Tutorial)
+* [Namespaces · alexander-yakushev/neko Wiki](https://github.com/alexander-yakushev/neko/wiki/Namespaces)
 
 ## License
 
