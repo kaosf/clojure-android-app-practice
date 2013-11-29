@@ -33,7 +33,7 @@
             ;; Uncomment this if dexer fails with
             ;; OutOfMemoryException. Set the value according to your
             ;; available RAM.
-            ;; :dex-opts ["-JXmx4096M"]
+            :dex-opts ["-JXmx4096M"]
 
             ;; If previous option didn't work, uncomment this as well.
             ;; :force-dex-optimize true
