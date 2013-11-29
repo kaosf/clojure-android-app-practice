@@ -16,7 +16,9 @@ Modify `$HOME/.lein/profiles.clj` by adding `[lein-droid/lein-droid "0.2.0"]` in
 lein droid doall
 ```
 
-`doall` is same to `compile` and `deploy`.
+`doall` is same to `build`, `apk` and `deploy`.
+
+`build` is same to `code-gen`, `compile` and `create-dex`.
 
 `deploy` is same to `install`, `run` and `forward-port`.
 
