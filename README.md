@@ -28,6 +28,10 @@ lein droid doall
 lein droid repl
 ```
 
+### TODO
+
+* Create a Second Activity and launch it
+
 ### SDK Version under 11
 
 Modifying `:target-version 17` to `:target-version 10` in `project.clj` and `minSdkVersion="11"` to `minSdkVersion="10" in `AndroidManifest.xml`, it makes build to fail. Error log is below.
